@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thầy Trí Học 4.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D0EFFF;
+            color: #333;
+        }
+
+        /* Header */
+ /* General styles */
+/* General styles */
+header {
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Để phần tử có thể gói lại khi thu nhỏ */
+}
+
+nav {
+    position: relative;
+}
+
+/* Nút hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menu mặc định */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FFF8DC;
+}
+
+.cta-button {
+    background-color: #FFF8DC;
+    color: #00BFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #00BFFF;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Hiển thị nút hamburger trên thiết bị nhỏ */
+    }
+
+    nav ul {
+        display: none; /* Ẩn menu theo mặc định */
+        flex-direction: column;
+        position: absolute;
+        background-color: #00BFFF;
+        top: 60px; /* Vị trí menu dưới header */
+        left: 0;
+        width: 100%; /* Menu sẽ trải dài toàn bộ màn hình */
+    }
+
+    nav ul.active {
+        display: flex; /* Hiển thị menu khi có class 'active' */
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        padding: 10px 0; /* Tạo khoảng cách giữa các mục menu */
+    }
+
+    .cta-button {
+        margin-top: 10px;
+    }
+}
+
+
+        .cta-button:hover {
+            background-color: #fff;
+            color: #00BFFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #D0EFFF;
+            color: #333;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero .cta-button {
+            font-size: 18px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #00BFFF;
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background-color: #D0EFFF;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .feature-card h3 {
+            color: #00BFFF;
+        }
+
+        .feature-card p {
+            margin-bottom: 20px;
+        }
+
+        .feature-card .cta-button {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 50px 20px;
+            background-color: #FFF8DC;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            color: #00BFFF;
+            margin-bottom: 40px;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #00BFFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer .footer-links a:hover {
+            color: #FFF8DC;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./logo-websie.png" style="height: 60px;" alt="Logo Thầy Trí Học">
+            </a>
+        </div>
+        <nav>
+            
+            <ul id="nav-list">
+                <li><a href="./index.html">Trang chủ</a></li>
+                <li><a href="./ai/">Trợ lý AI</a></li>
+                <li><a href="./forum">Thảo luận</a></li>
+                <li><a href="./lib">Thư viện</a></li>
+                <li><a href="./introduce/">Giới thiệu</a></li>
+                <li><a href="./ranks">Bảng xếp hạng</a></li>
+            </ul>
+        </nav>
+        <a href="./signin"><button class="cta-button">Đăng nhập</button></a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Khám phá nền tảng học tập thông minh với Thầy Trí Học 4.0</h1>
+        <p>Trợ lý AI, phân tích tiến độ học tập, bài giảng cá nhân hóa, và nhiều hơn nữa!</p>
+        <button class="cta-button">Khám phá ngay</button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Các tính năng nổi bật</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Trợ lý học tập AI</h3>
+                <img src="./image/001.png" style="height: 250px;" alt="AI Trợ lý">
+                <p>Giúp bạn giải bài tập, cung cấp giải thích chi tiết và gợi ý nguồn tài liệu học.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Phân tích tiến độ học tập</h3>
+                <img src="./image/002.png" style="height: 250px;" alt="Nghiên Cưu Tiến Độ">
+                <p>Theo dõi và phân tích tiến trình học của bạn để đề xuất cải thiện hiệu quả.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Đề xuất cá nhân hóa</h3>
+                <img src="./image/003.png" style="height: 250px;" alt="Đề xuất Cá Nhân Hóa">
+                <p>Tùy chỉnh nội dung học tập cho bạn dựa trên phong cách và tốc độ học tập.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Phòng thảo luận trực tuyến</h3>
+                <img src="./image/004.png" style="height: 250px;" alt="Phòng Thảo Luận Trực Tuyến">
+                <p>Thảo luận với bạn bè và giáo viên trong thời gian thực ngay trên nền tảng.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Thi trực tuyến</h3>
+                <img src="./image/000.png" style="height: 250px;"  alt="Thi Trực Tuyến">
+                <p>Tạo và thi trực tuyến với hệ thống chấm bài tự động và phân tích kết quả.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Thư viện học liệu phong phú</h3>
+                <img src="./image/005.png" style="height: 250px;" alt="Thư Viên Học Liệu Phong Phú">
+                <p>Tài liệu học đa dạng với các bài giảng, video và tài liệu tham khảo.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Bảng xếp hạng học tập</h3>
+                <img src="./image/006.png" style="height: 250px;" alt="Bảng Xếp Hạng">
+                <p>Xếp hạng học sinh dựa trên thành tích học tập, tạo động lực phấn đấu.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Trò chơi giáo dục</h3>
+                <img src="./image/007.png" style="height: 250px;" alt="Educated Games">
+                <p>Học mà chơi với các trò chơi giáo dục, giúp tăng cường kiến thức.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Hỗ trợ học tập cộng đồng</h3>
+                <img src="./image/008.png" style="height: 250px;" alt="Support public learning">
+                <p>Tạo nhóm học tập, học hỏi và giao lưu kiến thức với cộng đồng.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Quản lý thời gian học tập</h3>
+                <img src="./image/009.png" style="height: 250px;" alt="manganing time to learn">
+                <p>Nhắc nhở và quản lý thời gian học tập, bài tập cần hoàn thành và mục tiêu học tập.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Học viên nói gì về chúng tôi</h2>
+        <div class="testimonial">
+            <p>"Trợ lý AI của Thầy Trí Học 4.0 thực sự giúp tôi hiểu rõ bài tập và tiến bộ nhanh hơn!"</p>
+            <p>- Học sinh A</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="./index.html">Trang chủ</a>
+         <a href="./aiassisstance">Trợ lý AI</a>
+           <a href="./forum">Thảo luận</a>
+           <a href="./lib">Thư viện</a></li>
+            <a href="./exams">Thi trực tuyến</a>
+                <a href="./ranks">Bảng xếp hạng</a>
+        </div>
+        <p>© 2024 Thầy Trí Học 4.0. Bản quyền thuộc về riêng Phan Hoài Ân.</p>
+    </footer>
+
+</body>
+
+</html>

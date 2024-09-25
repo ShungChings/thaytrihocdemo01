@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Thầy Trí Học 4.0</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D0EFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #00BFFF;
+            margin-bottom: 20px;
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="email"],
+        .register-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00BFFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .register-form button:hover {
+            background-color: #0093E9;
+        }
+
+        .social-register {
+            margin: 20px 0;
+        }
+
+        .social-register button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .facebook-register {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .facebook-register:hover {
+            background-color: #334d84;
+        }
+
+        .google-register {
+            background-color: #db4437;
+            color: white;
+        }
+
+        .google-register:hover {
+            background-color: #c23321;
+        }
+
+        .or-divider {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .or-divider hr {
+            width: 40%;
+            border: 0.5px solid #ccc;
+        }
+
+        .or-divider span {
+            margin: 0 10px;
+            color: #ccc;
+        }
+
+        .login-link {
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-container">
+        <h2>Đăng ký tài khoản</h2>
+
+        <form class="register-form" action="#" method="POST">
+            <input type="text" name="fullname" placeholder="Họ và tên" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng ký</button>
+        </form>
+
+        <div class="or-divider">
+            <hr>
+            <span>hoặc</span>
+            <hr>
+        </div>
+
+        <div class="social-register">
+            <button class="facebook-register" onclick="registerWithFacebook()">Đăng ký bằng Facebook</button>
+            <button class="google-register" onclick="registerWithGoogle()">Đăng ký bằng Google</button>
+        </div>
+
+        <div class="login-link">
+            <p>Đã có tài khoản? <a href="./index.html">Đăng nhập</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Hàm giả lập đăng ký bằng Facebook
+        function registerWithFacebook() {
+            alert("Đang chuyển hướng tới Facebook để đăng ký...");
+            // Chuyển hướng tới trang đăng ký Facebook (sử dụng API thực khi triển khai)
+            window.location.href = "https://www.facebook.com/v9.0/dialog/oauth?client_id=YOUR_FACEBOOK_APP_ID&redirect_uri=YOUR_REDIRECT_URI";
+        }
+
+        // Hàm giả lập đăng ký bằng Google
+        function registerWithGoogle() {
+            alert("Đang chuyển hướng tới Google để đăng ký...");
+            // Chuyển hướng tới trang đăng ký Google (sử dụng API thực khi triển khai)
+            window.location.href = "https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=openid email profile";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+{
+    "data": [
+      {
+        "question": "hello",
+        "answer": "Chào bạn! Tôi là Thầy Trí Học, có gì cần giúp không?"
+      },
+       
+      {
+        "question": "Công nghệ thông tin ",
+        "answer": "https://vi.wikipedia.org/wiki/C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin"
+       },
+    {
+        "question": "Các chuyên ngành trong công nghệ thông tin ",
+        "answer": "https://vi.wikipedia.org/wiki/C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin"
+    },
+    {
+        "question": "Ngành công nghệ thông tin học những môn ",
+        "answer": "https://aptech.fpt.edu.vn/nganh-cong-nghe-thong-tin.html"
+    },
+    {
+        "question": "trở thành lập trình viên",
+        "answer": "https://aptech.fpt.edu.vn/nganh-cong-nghe-thong-tin.html"
+    },
+    {
+        "question": "An ninh mạng ",
+        "answer": "https://careerviet.vn/vi/talentcommunity/wiki-career/nganh-cong-nghe-thong-tin-la-gi-co-hoi-nghe-nghiep-va-muc-luong-tuong-lai.35A52330.html"
+    },
+    {
+        "question": "Các ngôn ngữ lập trình phổ biến hiện nay ",
+        "answer": "https://jobsgo.vn/blog/cong-nghe-thong-tin-gom-nhung-chuyen-nganh-nao/"
+    },
+    {
+        "question": "Sự khác biệt giữa phần cứng và phần mềm ",
+        "answer": "https://vi.wikipedia.org/wiki/C%C3%B4ng_ngh%E1%BB%87_th%C3%B4ng_tin"
+    },
+    {
+        "question": "Trí tuệ nhân tạo ",
+        "answer": "https://careerviet.vn/vi/talentcommunity/wiki-career/nganh-cong-nghe-thong-tin-la-gi-co-hoi-nghe-nghiep-va-muc-luong-tuong-lai.35A52330.html"
+    },
+    {
+      "question": "ai ",
+      "answer": "https://careerviet.vn/vi/talentcommunity/wiki-career/nganh-cong-nghe-thong-tin-la-gi-co-hoi-nghe-nghiep-va-muc-luong-tuong-lai.35A52330.html"
+  },
+    {
+        "question": "Blockchain ",
+        "answer": "https://glints.com/vn/blog/cong-nghe-thong-tin-gom-nhung-nganh-nao/"
+    },
+    {
+        "question": "xu hướng công nghệ ",
+        "answer": "https://aptech.fpt.edu.vn/nganh-cong-nghe-thong-tin.html"
+    },
+
+    {
+        "question": "Information Technology ",
+        "answer": "https://www.codecademy.com/resources/blog/what-is-information-technology/"
+    },
+    {
+        "question": "the main fields within Information Technology",
+        "answer": "https://www.coursera.org/articles/it-career-paths-how-to-get-started"
+    },
+    {
+        "question": "What subjects are studied in an IT degree",
+        "answer": "https://www.codecademy.com/resources/blog/what-is-information-technology/"
+    },
+    {
+        "question": "a software developer?",
+        "answer": "https://www.coursera.org/articles/it-career-paths-how-to-get-started"
+    },
+    {
+        "question": "cybersecurity",
+        "answer": "https://www.codecademy.com/resources/blog/what-is-information-technology/"
+    },
+    {
+        "question": "the most popular programming languages",
+        "answer": "https://www.coursera.org/articles/it-career-paths-how-to-get-started"
+    },
+    {
+        "question": "What is the difference between hardware and software",
+        "answer": "https://www.coursera.org/articles/it-career-paths-how-to-get-started"
+    },
+    {
+        "question": "Artificial Intelligence",
+        "answer": "https://www.coursera.org/articles/it-career-paths-how-to-get-started"
+    },
+    {
+      "question": "ai",
+      "answer": "https://www.coursera.org/articles/it-career-paths-how-to-get-started"
+  },
+    {
+        "question": "blockchain technology",
+        "answer": "https://www.rasmussen.edu/degrees/technology/blog/what-is-information-technology/"
+    },
+    {
+        "question": "What are the latest technology trends",
+        "answer": "https://www.rasmussen.edu/degrees/technology/blog/what-is-information-technology/"
+    },
+      
+    
+      {
+        "question": "bài tập toán",
+        "answer": "Hãy gửi đề bài cho tôi, tôi sẽ cố gắng giúp bạn giải."
+      },
+      {
+        "question": "giúp đỡ",
+        "answer": "Hãy đặt câu hỏi cho tôi, tôi sẽ cố gắng giúp bạn giải quyết nó."
+      },
+      {
+        "question": "lập trình",
+        "answer": "Bạn cần hỗ trợ lập trình ngôn ngữ nào? Python hay JavaScript?"
+      },
+      {
+        "question": "giới thiệu",
+        "answer": "Tôi là AI Thầy Trí Học, phiên bản 4.0, luôn sẵn sàng giúp bạn học tập!"
+      },
+      {
+        "question": "giờ học",
+        "answer": "Giờ học hiện tại là 9:00 sáng đến 5:00 chiều. Bạn có thể lên lịch học với tôi!"
+      },
+      {
+        "question": "lịch sử",
+        "answer": "Bạn cần hỏi về giai đoạn lịch sử nào? Tôi có thể hỗ trợ bạn."
+      },
+      {
+        "question": "ngữ văn",
+        "answer": "Hãy gửi cho tôi đoạn văn bản bạn cần phân tích, tôi sẽ giúp bạn làm rõ ý chính."
+      },
+      {
+        "question": "khoa học",
+        "answer": "Bạn cần hỗ trợ kiến thức khoa học nào? Tôi có thể giúp từ Vật lý, Hóa học đến Sinh học."
+      },
+      {
+        "question": "công nghệ",
+        "answer": "Bạn có muốn cập nhật thông tin mới nhất về công nghệ không? Tôi có thể giải thích nhiều xu hướng công nghệ hiện nay."
+      },
+      {
+        "question": "thể thao",
+        "answer": "Bạn muốn hỏi về môn thể thao nào? Tôi có thể cung cấp thông tin về bóng đá, bóng rổ, hoặc bất kỳ môn thể thao nào bạn quan tâm."
+      },
+      {
+        "question": "sức khỏe",
+        "answer": "Bạn muốn biết thông tin về sức khỏe? Tôi có thể tư vấn các cách rèn luyện sức khỏe tốt."
+      },
+      {
+        "question": "môi trường",
+        "answer": "Bảo vệ môi trường là rất quan trọng. Bạn muốn biết thêm về cách giữ gìn môi trường xanh sạch?"
+      },
+      {
+        "question": "tâm lý học",
+        "answer": "Tâm lý học là một lĩnh vực thú vị! Bạn có câu hỏi cụ thể về tâm lý con người không?"
+      },
+      {
+        "question": "đại số",
+        "answer": "Đại số là một nhánh của toán học nghiên cứu về các cấu trúc đại số như nhóm, vành, và trường. Bạn cần hỗ trợ về phần nào của đại số?"
+      },
+      {
+        "question": "hình học",
+        "answer": "Hình học nghiên cứu về các hình dạng, kích thước, và tính chất của không gian. Bạn có câu hỏi cụ thể về hình học không?"
+      },
+      {
+        "question": "giải tích",
+        "answer": "Giải tích là một nhánh của toán học nghiên cứu về sự thay đổi và các giới hạn. Bạn cần hỗ trợ về đạo hàm, tích phân hay phương trình vi phân?"
+      },
+      {
+        "question": "xác suất",
+        "answer": "Xác suất là một lĩnh vực nghiên cứu về khả năng xảy ra của các sự kiện. Bạn có câu hỏi cụ thể về lý thuyết xác suất không?"
+      },
+      {
+        "question": "thống kê",
+        "answer": "Thống kê là một lĩnh vực nghiên cứu về việc thu thập, phân tích, diễn giải và trình bày dữ liệu. Bạn cần hỗ trợ về phần nào của thống kê?"
+      },
+      {
+        "question": "lý thuyết số",
+        "answer": "Lý thuyết số nghiên cứu về các tính chất của các số nguyên. Bạn có câu hỏi cụ thể về lý thuyết số không?"
+      }
+  
+    
+    ]
+  }
+
+  

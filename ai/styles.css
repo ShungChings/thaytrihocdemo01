@@ -1,0 +1,110 @@
+/* Đảm bảo giao diện thân thiện với điện thoại và máy tính */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00bcd4;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.donate-button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate-button:hover {
+    background-color: #e68900;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e3f2fd;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #00bcd4;
+}
+
+.hero input {
+    width: calc(100% - 40px);
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+}
+
+.hero button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hero button:hover {
+    background-color: #0288d1;
+}
+
+.response {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #00796b;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    background-color: #00bcd4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero input {
+        width: calc(100% - 20px);
+    }
+}

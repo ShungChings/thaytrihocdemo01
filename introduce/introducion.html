@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Thầy Trí Học 4.0</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E6F7FF;
+            color: #333;
+        }
+
+        header {
+            background-color: #00BFFF;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            animation: slideIn 1s;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 2s;
+        }
+
+        .intro h2 {
+            color: #00BFFF;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .intro img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            animation: zoomIn 1s;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background: #F0F8FF;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            color: #00BFFF;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        footer {
+            background-color: #00BFFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .intro h2 {
+                font-size: 28px;
+            }
+
+            .intro p {
+                font-size: 16px;
+            }
+
+            .feature {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .intro h2 {
+                font-size: 24px;
+            }
+
+            .intro p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Thầy Trí Học 4.0</h1>
+        <p>Nền tảng giáo dục hiện đại tại Việt Nam</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Giới thiệu về chúng tôi</h2>
+            <p>Thầy Trí Học 4.0 là một nền tảng giáo dục tiên tiến, với mục tiêu giúp học sinh phát triển toàn diện và tiến một bước mới trong nền giáo dục.</p>
+            <p>Chúng tôi kết hợp công nghệ bảo mật và công nghệ giáo dục hiện đại để tạo ra một trải nghiệm học tập an toàn và hiệu quả.</p>
+            <p>Chúng tôi tự hào là nền tảng giáo dục lần đầu tiên xuất hiện tại Việt Nam, mang đến lối đi trong tương lai cho tất cả học sinh.</p>
+            <img src="./image/010.png" alt="Công nghệ giáo dục">
+            <p>Được thành lập bởi bạn Phan Hoài Ân (Albert Phan), học sinh lớp 10A1, chúng tôi cam kết mang lại chất lượng giáo dục tốt nhất cho học sinh Việt Nam.</p>
+        </div>
+
+        <h2 style="text-align: center; color: #00BFFF; margin: 40px 0;">Các tính năng nổi bật</h2>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>Trợ lý học tập AI</h3>
+                <p>Hệ thống trợ lý thông minh giúp học sinh giải quyết bài tập, cung cấp giải thích chi tiết và gợi ý nguồn tài liệu học.</p>
+            </div>
+            <div class="feature">
+                <h3>Phân tích tiến độ học tập</h3>
+                <p>AI theo dõi tiến trình học của từng học sinh và đưa ra các đề xuất cải thiện, bài tập bổ sung dựa trên khả năng từng cá nhân.</p>
+            </div>
+            <div class="feature">
+                <h3>Đề xuất bài giảng cá nhân hóa</h3>
+                <p>Tùy chỉnh nội dung học tập cho từng người dựa trên phong cách và tốc độ học tập của họ.</p>
+            </div>
+            <div class="feature">
+                <h3>Phòng thảo luận trực tuyến</h3>
+                <p>Giáo viên và học sinh có thể thảo luận bài học, đặt câu hỏi và giải đáp ngay trên nền tảng.</p>
+            </div>
+            <div class="feature">
+                <h3>Thi trực tuyến và chấm bài tự động</h3>
+                <p>Hỗ trợ giáo viên tạo bài thi, chấm điểm tự động và phân tích điểm số theo tiêu chí khác nhau.</p>
+            </div>
+            <div class="feature">
+                <h3>Thư viện học liệu phong phú</h3>
+                <p>Tài liệu số, bài giảng video, bài kiểm tra và tài liệu tham khảo được sắp xếp theo từng lớp học và môn học.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Thầy Trí Học 4.0. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+
+</body>
+
+</html>

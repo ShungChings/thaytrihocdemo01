@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Thầy Trí Học 4.0</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D0EFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #00BFFF;
+            margin-bottom: 20px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00BFFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .login-form button:hover {
+            background-color: #0093E9;
+        }
+
+        .social-login {
+            margin: 20px 0;
+        }
+
+        .social-login button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .facebook-login {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .facebook-login:hover {
+            background-color: #334d84;
+        }
+
+        .google-login {
+            background-color: #db4437;
+            color: white;
+        }
+
+        .google-login:hover {
+            background-color: #c23321;
+        }
+
+        .or-divider {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .or-divider hr {
+            width: 40%;
+            border: 0.5px solid #ccc;
+        }
+
+        .or-divider span {
+            margin: 0 10px;
+            color: #ccc;
+        }
+
+        .register-link {
+            margin-top: 10px;
+        }
+
+        .register-link a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+
+        <form class="login-form" action="#" method="POST">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
+
+        <div class="or-divider">
+            <hr>
+            <span>hoặc</span>
+            <hr>
+        </div>
+
+        <div class="social-login">
+            <button class="facebook-login" onclick="loginWithFacebook()">Đăng nhập bằng Facebook</button>
+            <button class="google-login" onclick="loginWithGoogle()">Đăng nhập bằng Google</button>
+        </div>
+
+        <div class="register-link">
+            <p>Chưa có tài khoản? <a href="./register.html">Đăng ký</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Hàm giả lập đăng nhập bằng Facebook
+        function loginWithFacebook() {
+            alert("Đang chuyển hướng tới Facebook để đăng nhập...");
+            // Chuyển hướng tới trang đăng nhập Facebook (sử dụng API thực khi triển khai)
+            window.location.href = "https://www.facebook.com/v9.0/dialog/oauth?client_id=YOUR_FACEBOOK_APP_ID&redirect_uri=YOUR_REDIRECT_URI";
+        }
+
+        // Hàm giả lập đăng nhập bằng Google
+        function loginWithGoogle() {
+            alert("Đang chuyển hướng tới Google để đăng nhập...");
+            // Chuyển hướng tới trang đăng nhập Google (sử dụng API thực khi triển khai)
+            window.location.href = "https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=openid email profile";
+        }
+    </script>
+
+</body>
+
+</html>

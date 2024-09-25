@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Thầy Trí Học 4.0</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./logo-websie.png" alt="Logo Thầy Trí Học" />
+            <h1>AI Thầy Trí Học 4.0</h1>
+        </div>
+       <a href="https://forms.gle/sFRcLmq5DXdPoUEX6"><button class="donate-button">Đóng góp</button></a> 
+    </header>
+
+    <!-- Main content -->
+    <section class="hero">
+        <h2>Khám phá nền tảng học tập thông minh</h2>
+        <p>Tận dụng trợ lý AI để cải thiện kỹ năng học tập của bạn</p>
+        <input type="text" id="user-input" placeholder="Nhập câu hỏi của bạn...">
+        <button onclick="getResponse()">Gửi</button>
+        <div class="response" id="response"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 AI Thầy Trí Học 4.0</p>
+    </footer>
+
+ <script >
+    async function fetchData() {
+    const response = await fetch('data.json');
+    const data = await response.json();
+    return data.data;
+}
+
+async function getResponse() {
+    const userInput = document.getElementById('user-input').value.toLowerCase();
+    let response = "Xin lỗi, tôi chưa hiểu câu hỏi của bạn. Hãy thử lại!";
+    
+    // Lấy dữ liệu từ file JSON
+    const data = await fetchData();
+
+    // Tìm từ liên quan đến
+    data.forEach(item => {
+        const keywords = item.question.split(' ');
+        keywords.forEach(keyword => {
+            if (userInput.includes(keyword)) {
+                response = item.answer;
+            }
+        });
+    });
+
+    document.getElementById('response').innerHTML = response;
+}
+
+ </script>
+</body>
+
+</html>
