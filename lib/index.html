@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Học Liệu - Thầy Trí Học 4.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f8fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #1e90ff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subject-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .subject-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .subject-card h3 {
+            color: #1e90ff;
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .subject-card p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .subject-card a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #1e90ff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .subject-card a:hover {
+            background-color: #155b8a;
+        }
+
+        /* Upload Button */
+        .upload-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .upload-btn {
+            padding: 15px 30px;
+            background-color: #ff8c00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-btn:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .subject-card h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Thư Viện Học Liệu - Thầy Trí Học 4.0</h1>
+    </header>
+
+    <div class="container">
+        <h2>Các Môn Học</h2>
+        <div class="subject-list">
+            <div class="subject-card">
+                <img src="https://cmsv2-assets.apptegy.net/uploads/12837/file/1394965/86a7f4dc-5aba-4456-967d-1bfbc3d4aa01.jpeg" style="height: 200px; width: 302px;"  alt="Tài Liệu Toán">
+                <h3>Toán Học</h3>
+                <p>Các tài liệu chuyên sâu về Đại số, Hình học và Giải tích.</p>
+                <a href="https://tailieumontoan.com/tai-lieu-toan-thpt-4">Tải tài liệu</a>
+            </div>
+
+            <div class="subject-card">
+                <img src="https://images.theconversation.com/files/191827/original/file-20171025-25516-g7rtyl.jpg?ixlib=rb-4.1.0&rect=0%2C70%2C7875%2C5667&q=45&auto=format&w=926&fit=clip" style="height: 200px; width: 302px;" alt="Tài Liệu Vật Lý">
+                <h3>Vật Lý</h3>
+                <p>Các tài liệu về Điện, Quang học, Cơ học lượng tử và nhiều hơn nữa.</p>
+                <a href="https://vietjack.com/tai-lieu-mon-ly/">Tải tài liệu</a>
+            </div>
+
+            <div class="subject-card">
+                <img src="https://bright-culture.com/wp-content/uploads/2023/05/colorless-chemistry-optimized.jpg" style="height: 200px; width: 302px;" alt="Tài Liệu Hóa Học">
+                <h3>Hóa Học</h3>
+                <p>Các tài liệu về Phản ứng hóa học, Hóa hữu cơ, và các bài thí nghiệm.</p>
+                <a href="https://vietjack.com/tai-lieu-mon-hoa/">Tải tài liệu</a>
+            </div>
+
+            <div class="subject-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-DhZrSV00CLm1KeNl4qVMnZGJx51QTRPEwg&s" style="height: 200px; width: 302px;" alt="Tài Liệu Tiếng Anh">
+                <h3>Tiếng Anh</h3>
+                <p>Tài liệu về Ngữ pháp, Từ vựng, và Luyện thi IELTS, TOEIC.</p>
+                <a href="https://www.dropbox.com/scl/fo/ffk7vp48hqjl8rnvi6jmb/AE_8iYaUY7N1dJm-R12wing?rlkey=gec9wtlv4egk8xp8e20fts1wm&st=trlktqul&dl=0">Tải tài liệu</a>
+            </div>
+
+            <div class="subject-card">
+                <img src="https://i.pinimg.com/originals/b0/52/6d/b0526d8ca7d5b6202bc0b22481258421.jpg" style="height: 200px; width: 302px;" alt="Tài Liệu Văn Học">
+                <h3>Ngữ Văn</h3>
+                <p>Tài liệu về Văn học hiện đại và cổ điển, phân tích tác phẩm.</p>
+                <a href="https://thichvanhoc.com.vn/tai-lieu/">Tải tài liệu</a>
+            </div>
+
+            <div class="subject-card">
+                <img src="https://haenglish.edu.vn/wp-content/uploads/2023/08/ielts-speaking-history-1.jpg" style="height: 200px; width: 302px;" alt="Tài Liệu Lịch Sử">
+                <h3>Lịch Sử</h3>
+                <p>Khám phá những sự kiện lịch sử từ cổ đại đến hiện đại.</p>
+                <a href="https://thptdaosontay.hcm.edu.vn/lich-su/tai-lieu-mon-lich-su-lop-12/ctmb/89462/437958">Tải tài liệu</a>
+            </div>
+        </div>
+
+        <div class="upload-container">
+            <a href="https://forms.gle/iHoXAaCdxTbQB8qE8"><button class="upload-btn">Chia sẻ tài liệu</button>
+            </a></div>
+    </div>
+
+    <footer>
+        <p>© 2024 Thầy Trí Học 4.0 | <a href="https://zalo.me/0379883576">Liên hệ</a> | <a href="https://forms.gle/iHoXAaCdxTbQB8qE8">Đóng góp tài liệu</a></p>
+    </footer>
+
+</body>
+
+</html>

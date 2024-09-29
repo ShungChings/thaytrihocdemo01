@@ -25,40 +25,120 @@
         <p>Tận dụng trợ lý AI để cải thiện kỹ năng học tập của bạn</p>
         <input type="text" id="user-input" placeholder="Nhập câu hỏi của bạn...">
         <button onclick="getResponse()">Gửi</button>
-        <div class="response" id="response"></div>
+        <br>
+        <br>
+        <div class="reply">
+            Thầy Trí Học Trả Lời:
+        </div>
+        <div class="response" id="response">
+            
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 AI Thầy Trí Học 4.0</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
  <script >
-    async function fetchData() {
-    const response = await fetch('data.json');
-    const data = await response.json();
-    return data.data;
+// Đảm bảo math.js được import đúng cách
+const math = window.math;
+
+async function fetchData() {
+    try {
+        const response = await fetch('data.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return [];
+    }
+}
+
+function removeStopWords(input) {
+    const stopWords = ["làm sao", "cái gì", "cách nào", "là gì", "tại sao", "như thế nào"];
+    let result = input;
+    stopWords.forEach(word => {
+        const regex = new RegExp(`\\b${word}\\b`, 'gi');
+        result = result.replace(regex, '');
+    });
+    console.log("After removing stop words:", result); // Debugging line
+    return result.trim();
+}
+
+function isMathQuestion(input) {
+    const mathRegex = /^[0-9+\-*/().\s=]+$/;
+    return mathRegex.test(input);
+}
+
+function calculateMathExpression(expression) {
+    try {
+        return math.evaluate(expression);
+    } catch (error) {
+        console.error('Calculation error:', error);
+        return `Lỗi trong quá trình tính toán: ${error.message}`;
+    }
 }
 
 async function getResponse() {
-    const userInput = document.getElementById('user-input').value.toLowerCase();
+    let userInput = document.getElementById('user-input').value.toLowerCase();
+    console.log("Original input:", userInput); // Debugging line
+    userInput = removeStopWords(userInput);
+    console.log("Processed input:", userInput); // Debugging line
     let response = "Xin lỗi, tôi chưa hiểu câu hỏi của bạn. Hãy thử lại!";
     
-    // Lấy dữ liệu từ file JSON
-    const data = await fetchData();
+    // Kiểm tra xem câu hỏi có phải là phép toán không
+    if (isMathQuestion(userInput)) {
+        response = calculateMathExpression(userInput);
+    } else {
+        // Lấy dữ liệu từ file JSON
+        const data = await fetchData();
 
-    // Tìm từ liên quan đến
-    data.forEach(item => {
-        const keywords = item.question.split(' ');
-        keywords.forEach(keyword => {
-            if (userInput.includes(keyword)) {
-                response = item.answer;
-            }
-        });
-    });
+        // Cấu hình Fuse.js
+        const options = {
+            keys: ['question'],
+            threshold: 0.3, // Độ nhạy của tìm kiếm
+            includeScore: true // Bao gồm điểm số để đánh giá độ chính xác
+        };
+        const fuse = new Fuse(data, options);
+        const result = fuse.search(userInput);
 
-    document.getElementById('response').innerHTML = response;
+        if (result.length > 0) {
+            response = result[0].item.answer;
+        }
+    }
+
+    const responseElement = document.getElementById('response');
+    if (responseElement) {
+        responseElement.innerHTML = response;
+        startTextAnimation(response);
+    } else {
+        console.error('Element with id "response" not found.');
+    }
 }
+
+function startTextAnimation(text) {
+    const textContainer = document.getElementById('text-container');
+    if (textContainer) {
+        textContainer.innerHTML = text;
+        textContainer.style.width = '0'; // Reset width for animation
+        textContainer.style.animation = 'none'; // Reset animation
+        setTimeout(() => {
+            textContainer.style.animation = 'typing 5s steps(40, end), blink-caret .75s step-end infinite';
+        }, 10); // Small delay to allow reset
+    } else {
+        console.error('Element with id "text-container" not found.');
+    }
+}
+
+
+</script>
+
 
  </script>
 </body>
